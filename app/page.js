@@ -8,7 +8,7 @@ import useBinanceData from './hooks/useBinanceData';
 
 
 export default function Home() {
-    
+  
   const [selectedCoin, setSelectedCoin] = useState('ethusdt');
   const [interval, setInterval] = useState('1s');
 
