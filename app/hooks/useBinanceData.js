@@ -29,7 +29,6 @@ const [prevSymbol,setPrevSymbol] =useState(null);
 
     return () => ws.close();  // Cleanup WebSocket on unmount
   }, [symbol, interval]);
-  console.log("chardata",chartData);
- 
+
   return chartData;
 }
