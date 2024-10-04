@@ -13,7 +13,7 @@ export default function CandlestickChart({ chartData, symbol }) {
                 width: chartContainerRef.current.clientWidth,
                 height: 400,
                 layout: {
-                    backgroundColor: '#ffffff',
+                    backgroundColor: '#eaf5ff',
                     textColor: '#000',
                 },
                 grid: {
@@ -101,10 +101,10 @@ export default function CandlestickChart({ chartData, symbol }) {
             // If stored data exists, merge it with the new incoming data
             const parsedStoredData = JSON.parse(storedData);
             const lastStoredCandle = parsedStoredData[parsedStoredData.length - 1];
-            const firstNewCandle = filledData[0];
+            const firstNewCandle = filledData.length > 0 ? filledData[0] : null; // Ensure filledData has at least one element
 
-            // Only merge if the last stored candle is older than the new data
-            if (lastStoredCandle && lastStoredCandle.time < firstNewCandle.time) {
+            // Only merge if the last stored candle is older than the new data and firstNewCandle is valid
+            if (lastStoredCandle && firstNewCandle && lastStoredCandle.time < firstNewCandle.time) {
                 mergedData = [...parsedStoredData, ...filledData];
             }
         }

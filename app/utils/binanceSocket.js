@@ -5,7 +5,6 @@ export function createBinanceSocket(symbol, interval, onMessage) {
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       onMessage(data);
-      console.log(data);
     };
   
     ws.onerror = (error) => {
