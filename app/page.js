@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import Cointoggle from './components/temp_Cointoggle';
+import Cointoggle from './components/CoinToggle';
 import CandlestickChart from './charts/CandlestickChart';
 import useBinanceData from './hooks/useBinanceData';
 

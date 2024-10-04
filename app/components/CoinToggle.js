@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 
-const Cointoggle = ({ selectedCoin, setSelectedCoin }) => {
+const CoinToggle = ({ selectedCoin, setSelectedCoin }) => {
     const coins = ["ethusdt", "bnbusdt", "dotusdt"];
   
     return (
@@ -25,4 +25,4 @@ const Cointoggle = ({ selectedCoin, setSelectedCoin }) => {
   };
   
 
-export default Cointoggle;
+export default CoinToggle;
